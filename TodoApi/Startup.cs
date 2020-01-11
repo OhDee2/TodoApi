@@ -28,7 +28,7 @@ namespace TodoApi
         public void ConfigureServices(IServiceCollection services)
         {
             services.AddDbContext<TodoContext>(opt =>
-               opt.UseInMemoryDatabase("TodoList"));
+               opt.UseSqlServer("Server=tcp:jimdb.database.windows.net,1433;Initial Catalog=jimtodo;Persist Security Info=False;User ID=jim;Password=database2112!;MultipleActiveResultSets=False;Encrypt=True;TrustServerCertificate=False;Connection Timeout=30;"));
             services.AddControllers();
         }
 
